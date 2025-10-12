@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from src.api.scraper_routes import router as scraper_router
 from src.api.posts_routes import router as posts_router
 import uvicorn
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI(
     title="SDAL API",
