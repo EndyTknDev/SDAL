@@ -19,9 +19,10 @@ class ScrapperService:
         return task
 
     async def _run_olx_scraper(self):
-        result = await olx_scraper_runner()
+        pass
+        #result = await olx_scraper_runner()
         
-        print(result)
+        #print(result)
 
 # Instância singleton do service
 scrapper_service = ScrapperService()
