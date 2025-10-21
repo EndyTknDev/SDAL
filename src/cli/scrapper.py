@@ -5,7 +5,7 @@ def main() -> None:
     print('starting scrapper...')
     scrapper = OlxScrapper()
     scrapper.start()
-    sections = scrapper.handle_test_post()
+    sections = scrapper.handle_pages(1)
     items = scrapper.handle_imoveis_sections(sections=sections)
     for item in items:
         print(item)

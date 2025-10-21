@@ -4,14 +4,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-class PostOptions:
+class ListPageOptions:
     def __init__(self, country: str, category: str, page: int, min_price: int | None = None):
         self.country = country
         self.category = category
         self.page = page
         self.min_price = min_price
 
-def post_list_handler(driver: WebDriver, options: PostOptions):
+def post_list_handler(driver: WebDriver, options: ListPageOptions):
     driver.get(f"https://www.olx.com.br/{options.category}/venda/estado-{options.country}?ps={options.min_price}&o={options.page}")
 
     wait = WebDriverWait(driver, 20)
